@@ -33,7 +33,7 @@ class WaveformView @JvmOverloads constructor(
     }
 
     fun addAmplitude(maxAmplitude: Float) {
-        val amplitude = (maxAmplitude / Short.MAX_VALUE) + this.height * 0.8f
+        val amplitude = (maxAmplitude / Short.MAX_VALUE) * this.height * 0.8f
 
         ampList.add(amplitude)
         rectList.clear()
@@ -44,7 +44,7 @@ class WaveformView @JvmOverloads constructor(
 
         for ((i, amp) in amps.withIndex()) {
             val rectF = RectF()
-            rectF.top = (this.height / 2) - amp / 2 -3f
+            rectF.top = (this.height / 2) - amp / 2 - 3f
             rectF.bottom = rectF.top + amp + 3f
             rectF.left = i * rectWidth
             rectF.right = rectF.left + rectWidth - 5f
