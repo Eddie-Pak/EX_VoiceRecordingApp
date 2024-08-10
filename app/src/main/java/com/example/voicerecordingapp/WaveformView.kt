@@ -55,7 +55,7 @@ class WaveformView @JvmOverloads constructor(
         invalidate()
     }
 
-    fun  replayAmplitude(duration: Int) {
+    fun  replayAmplitude() {
         rectList.clear()
 
         val maxRect = (this.width / rectWidth).toInt()
